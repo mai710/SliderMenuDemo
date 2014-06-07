@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZFf-at-KCI" userLabel="View1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Fon-M2-V3P">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.96164549239999997" blue="0.80111539379999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FbF-4F-zhL" userLabel="View2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Wlc-Sa-JEi">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Dtv-Ka-3oD"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5v-gN-yOm" customClass="SlidingTabView">
+                                <rect key="frame" x="0.0" y="80" width="320" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tab" translatesAutoresizingMaskIntoConstraints="NO" id="4lC-0K-qT0">
+                                        <rect key="frame" x="0.0" y="20" width="320" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="9Az-rm-XoM"/>
+                                            <constraint firstAttribute="width" constant="320" id="C7V-JD-T2d"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="MHf-iw-D2T"/>
+                                    <constraint firstAttribute="height" constant="58" id="Pv3-ct-GM8"/>
+                                    <constraint firstAttribute="centerX" secondItem="4lC-0K-qT0" secondAttribute="centerX" id="U7Z-FQ-zB2"/>
+                                    <constraint firstAttribute="centerY" secondItem="4lC-0K-qT0" secondAttribute="centerY" id="ihi-Uo-tmJ"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="pwv-By-OZE" appends="YES" id="tcv-99-sin"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="FbF-4F-zhL" secondAttribute="centerX" id="3r7-TT-wur"/>
+                            <constraint firstItem="ZFf-at-KCI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="3rg-WR-OUX"/>
+                            <constraint firstItem="c5v-gN-yOm" firstAttribute="top" secondItem="FbF-4F-zhL" secondAttribute="bottom" constant="-20" id="JaR-Q5-lAU"/>
+                            <constraint firstItem="c5v-gN-yOm" firstAttribute="top" secondItem="ZFf-at-KCI" secondAttribute="top" constant="80" id="Ofa-31-w4M"/>
+                            <constraint firstAttribute="centerX" secondItem="c5v-gN-yOm" secondAttribute="centerX" id="Tdm-kh-1yh"/>
+                            <constraint firstAttribute="trailing" secondItem="ZFf-at-KCI" secondAttribute="trailing" id="ZRf-Jr-9c2"/>
+                            <constraint firstItem="ZFf-at-KCI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="n0g-uB-FnE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZFf-at-KCI" secondAttribute="bottom" id="uOM-bW-p2Q"/>
+                            <constraint firstItem="ZFf-at-KCI" firstAttribute="top" secondItem="FbF-4F-zhL" secondAttribute="top" id="xc9-8I-G3G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="Wlc-Sa-JEi" id="aQR-44-86g"/>
+                        <outlet property="slider" destination="c5v-gN-yOm" id="VtW-uZ-ibR"/>
+                        <outlet property="sliderConstraint" destination="Ofa-31-w4M" id="6aB-z9-2ya"/>
+                        <outlet property="tabParent" destination="4lC-0K-qT0" id="8jY-gP-chx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="pwv-By-OZE"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="320" height="568"/>
+        <image name="tab" width="320" height="17"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
